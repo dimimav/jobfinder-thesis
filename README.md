@@ -1,1 +1,1 @@
-# jobfinder-thesis
+Requirements: jdk 1.7, Apache Maven
