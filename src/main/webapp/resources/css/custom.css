@@ -1,0 +1,27 @@
+.error{
+	color:red;
+}
+
+.job-container {
+	padding: 12px; 15 px;
+	margin-top: 10px;
+	max-width: 500px;
+}
+
+.job-image-container {
+	float: left;
+	width: 130px;
+}
+
+.job-info-container {
+	padding-left: 153px;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-group {
+	padding-top: 35px;
+}
