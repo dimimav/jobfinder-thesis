@@ -12,3 +12,6 @@ Installation:
 
 Type in your browser
 localhost:8080/jobfinder
+
+## License
+This project is Open Source software released under the MIT License
