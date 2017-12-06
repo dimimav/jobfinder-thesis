@@ -19,7 +19,7 @@ and recommend which candidate is suitable.
 ## Run
 http://localhost:8080/jobfinder
 
-## Documentation
+## Documentation (Greek)
 https://apothesis.lib.teicrete.gr/bitstream/handle/11713/8194/MavroforakisDimitris2017.pdf
 
 ## License
