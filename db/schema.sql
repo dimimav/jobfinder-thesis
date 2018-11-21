@@ -1,4 +1,4 @@
-CREATE DATABASE jobfinder DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS jobfinder DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
 USE jobfinder;
 
@@ -6,7 +6,7 @@ CREATE TABLE users (
   id         int(10) NOT NULL AUTO_INCREMENT, 
   username   varchar(50) NOT NULL, 
   password   varchar(255) NOT NULL, 
-  created_at datetime NOT NULL, 
+  created_at datetime DEFAULT NOW() NOT NULL,
   PRIMARY KEY (id));
   CREATE TABLE roles (
   id     int(10) NOT NULL AUTO_INCREMENT, 
@@ -19,7 +19,7 @@ CREATE TABLE users_roles (
   user_id));
 CREATE TABLE companies (
   id         int(10) NOT NULL AUTO_INCREMENT, 
-  name       varchar(100) NOT NULL, 
+  name       varchar(100),
   tax_number int(10), 
   country    varchar(100), 
   city       varchar(100), 
@@ -30,10 +30,10 @@ CREATE TABLE companies (
   PRIMARY KEY (id));
 CREATE TABLE candidates (
   id        int(10) NOT NULL AUTO_INCREMENT, 
-  fname     varchar(50) NOT NULL, 
-  lname     varchar(50) NOT NULL, 
-  age       int(3) NOT NULL, 
-  gender    varchar(10) NOT NULL, 
+  fname     varchar(50),
+  lname     varchar(50),
+  age       int(3),
+  gender    varchar(10),
   address   varchar(100), 
   email     varchar(100), 
   telephone varchar(100), 
@@ -72,7 +72,7 @@ CREATE TABLE candidates (
   candidate_id int(10), 
   PRIMARY KEY (id));
   CREATE TABLE job_applications_working_experiences (
-  int                int(10) NOT NULL AUTO_INCREMENT, 
+  id                int(10) NOT NULL AUTO_INCREMENT,
   title              varchar(100) NOT NULL, 
   company            varchar(100) NOT NULL, 
   description        varchar(255) NOT NULL, 
@@ -80,7 +80,7 @@ CREATE TABLE candidates (
   start_date         date NOT NULL, 
   end_date           date NOT NULL, 
   job_application_id int(10) NOT NULL, 
-  PRIMARY KEY (int));
+  PRIMARY KEY (id));
   CREATE TABLE education_levels (
   id      int(10) NOT NULL AUTO_INCREMENT, 
   title   varchar(20) NOT NULL, 
