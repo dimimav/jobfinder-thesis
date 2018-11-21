@@ -19,6 +19,12 @@ and recommend which candidate is suitable.
 `mvn tomcat7:run`
 
 ## Run in Docker container
+Update jdbc url in database.properties to:
+
+jdbc.url=jdbc:mysql://mysql-jobfinder:3306/jobfinder?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+
+Start containers:
+
 `docker-compose up`
 
 ## App url
