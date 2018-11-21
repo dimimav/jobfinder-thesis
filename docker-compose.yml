@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql-jobfinder
+    image: mysql/mysql-server:5.7
+    environment:
+      MYSQL_DATABASE: jobfinder
+      MYSQL_ROOT_PASSWORD: zoot
+      MYSQL_ROOT_HOST: '%'
+    ports:
+    - "3306:3306"
+    restart: always
+    volumes:
+    - ./db/schema.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    restart: always
+    build: .
+    working_dir: /app
+    volumes:
+    - ./:/app
+    - ~/.m2:/root/.m2
+    ports:
+    - "8080:8080"
+    command: mvn tomcat7:run
+    depends_on:
+    - mysql
