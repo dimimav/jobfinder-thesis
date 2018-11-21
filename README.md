@@ -8,16 +8,21 @@ and recommend which candidate is suitable.
 * Apache Maven
 
 ## Pre-installation:
-1. run script db/schema.sql into your local db
+1. execute script db/schema.sql into your local db
 2. update src/main/resources/database.properties with your local db properties
 
 ## Installation
-1. git clone https://github.com/dimimav/jobfinder-thesis.git
-2. cd jobfinder-thesis
-3. mvn tomcat7:run
+`git clone https://github.com/dimimav/jobfinder-thesis.git`
 
-## Run
-http://localhost:8080/jobfinder
+`cd jobfinder-thesis`
+
+`mvn tomcat7:run`
+
+## Run in Docker container
+`docker-compose up`
+
+## App url
+`http://localhost:8080/jobfinder`
 
 ## Documentation (Greek)
 https://apothesis.lib.teicrete.gr/bitstream/handle/11713/8194/MavroforakisDimitris2017.pdf
